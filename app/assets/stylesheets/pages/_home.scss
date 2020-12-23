@@ -1,7 +1,6 @@
 
 body {
   font-family: $my-font;
-  // font-style: italic;
 }
 
 .container {
@@ -9,18 +8,19 @@ body {
   transform: translate(-50%, -50%);
   top: 40%;
   left: 50%;
-  // padding-top: 500px;
 }
 
 .glitch {
-  color: rgb(223, 191, 191);
+  color: black;
   position: relative;
-  font-size: 9vw;
+  font-size: 4vw;
   animation: glitch 5s 5s infinite;
   text-align: center;
   width: 100%;
-  text-shadow: 0 0 100px rgba(223, 191, 191, 0.4);
+  // text-shadow: 0 0 100px rgba(223, 191, 191, 0.4);
+
 }
+
 
 .glitch::before {
   content: attr(data-text);
@@ -38,7 +38,7 @@ body {
   content: attr(data-text);
   position: absolute;
   left: 2px;
-  text-shadow: -5px 0 lightgreen;
+  text-shadow: -5px 0 #24FF00;
   // background: $background-color;
   overflow: hidden;
   top: 0;
@@ -88,7 +88,7 @@ body {
 
 .glow {
   @extend .glitch;
-  text-shadow: 0 0 1000px rgb(223, 191, 191);
+  // text-shadow: 0 0 1000px rgb(223, 191, 191);
   color: transparent;
   position: absolute;
   top: 0;
@@ -98,7 +98,7 @@ body {
 .subtitle {
   font-family: $body-font;
   font-weight: 100;
-  font-size: 2vw;
+  font-size: 1vw;
   text-shadow: 0 0 100px rgba(223, 191, 191, 0.4);
   color: rgba(165, 141, 141, .4);
   letter-spacing: 1em;
@@ -107,8 +107,31 @@ body {
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 2s;
+  animation-duration: 5s;
+  // animation: pulse 2s infinite alternate;
 }
+
+// @keyframes pulse {
+//   0% {
+//     text-shadow: 0 0 35px rgb(223, 191, 191);;
+//   }
+//   100% {
+//     text-shadow: 0 0 35px lightgreen;
+//   }
+  // 40% {
+  //   text-shadow: 0 0 70px #372554;
+  // }
+  // 60% {
+  //   text-shadow: 0 0 70px #5C0029;
+  // }
+  // 80% {
+  //   text-shadow: 0 0 70px #1F271B;
+  // }
+  // 100% {
+  //   text-shadow: 0 0 50px #f70fa2
+  //
+  // }
+// }
 
 @keyframes fadeInOpacity {
   0% {
@@ -126,4 +149,4 @@ body {
   2%{
     transform: rotateX(0deg) skewX(0deg);
   }
-}// Specific CSS for your home-page
+}
