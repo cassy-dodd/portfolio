@@ -3,12 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Suranna&display=swap');
 // Define fonts for body and headers
 $body-font: 'Source Code Pro', monospace;
 $headers-font: "Nunito", "Helvetica", "sans-serif";
 // $my-font: 'Press Start 2P', cursive;
-$my-font: 'VT323', monospace;
+// $my-font: 'VT323', monospace;
+$my-font: 'Roboto', sans-serif;
 // $my-font: 'Suranna', serif;
 // To use a font file (.woff) uncomment following lines
 // @font-face {

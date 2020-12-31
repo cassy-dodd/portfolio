@@ -6,7 +6,7 @@ body {
 .container {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 40%;
+  top: 25%;
   left: 50%;
 }
 
@@ -47,9 +47,9 @@ body {
 }
 
 @keyframes glitch {
-  1%{
-    transform: rotateX(10deg) skewX(90deg);
-  }
+  // 1%{
+  //   // transform: rotateX(10deg) skewX(90deg);
+  // }
   2%{
     transform: rotateX(0deg) skewX(0deg);
   }
