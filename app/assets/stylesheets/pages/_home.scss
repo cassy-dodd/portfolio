@@ -18,7 +18,7 @@ body {
 }
 
 .about {
-  margin-top: 100px;
+  margin-top: 50px;
   width: 70%;
   height: 70%;
   display: flex;
@@ -27,15 +27,35 @@ body {
   padding: 24px;
   border-radius: 16px;
   justify-content: space-between;
-  img {
-    height: 300px;
-    width: 300px;
-    align-self: flex-end;
-  }
 }
 
 .profile {
   align-self: center;
+  margin-top: 20px;
+  border-radius: 50%;
+  // animation: pulse-color 20s infinite alternate;
+  // box-shadow: 0 0 70px rgba(255, 255, 255, 0.9);
+  // animation-name: fadeInOpacity;
+  // animation-iteration-count: 1;
+  // animation-timing-function: ease-in;
+  // animation-duration: 3s;
+  img {
+    height: 300px;
+    width: 300px;
+    align-self: flex-end;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    border-radius: 50%;
+  }
+}
+
+.banner {
+  background-color: rgba(141, 186, 195, 0.2);
+    padding: 36px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
 }
 
 .definition {
@@ -133,7 +153,7 @@ body {
 .subtitle {
   font-family: $body-font;
   font-weight: 100;
-  font-size: 1vw;
+  font-size: 2vw;
   text-shadow: 0 0 100px rgba(223, 191, 191, 0.4);
   color: rgba(165, 141, 141, .4);
   letter-spacing: 1em;
@@ -153,7 +173,7 @@ body {
     box-shadow: 0 0 35px lightblue;
   }
   50% {
-    box-shadow: 0 0 70px lightgreen;
+    box-shadow: 0 0 70px rgb(70, 150, 170);
   }
   75% {
     box-shadow: 0 0 70px rgb(223, 191, 191);
@@ -180,7 +200,14 @@ body {
 
 @media only screen and (max-width: 600px) {
   div.main-container {
-    #profile-pic { display: none; }
+    #profile-pic {
+      height: 200px;
+      width: 200px;
+    }
+    .profile {
+      // height: 50%;
+      // width: 50%;
+    }
   .cards {
     width: 100%;
   }
@@ -199,7 +226,9 @@ body {
 
 @media only screen and (max-width: 768px) {
   div.main-container {
-    #profile-pic { display: none; }
+    #profile-pic {
+
+    }
   .cards {
     width: 100%;
   }

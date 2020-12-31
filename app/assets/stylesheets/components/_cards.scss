@@ -76,15 +76,15 @@ align-items: center;
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 35px rgb(223, 191, 191);;
+    box-shadow: 0 0 35px rgb(223, 171, 191);
   }
   25% {
-    box-shadow: 0 0 35px lightgreen;
+    box-shadow: 0 0 35px rgb(161, 90, 182);
   }
   50% {
-    box-shadow: 0 0 70px lightblue;
+    box-shadow: 0 0 70px rgb(150, 200, 255);
   }
   75% {
-    box-shadow: 0 0 70px orange;
+    box-shadow: 0 0 70px rgb(245, 215, 70)
   }
 }
