@@ -12,7 +12,7 @@
 
 .cards {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 grid-gap: 50px;
 align-items: center;
 }
@@ -55,13 +55,16 @@ align-items: center;
 }
 
 .card__face--front {
-  background: red;
   border-radius: 8px;
+  right: 0.2px;
+
 }
 
 .card__face--back {
   transform: rotateY(180deg);
   border-radius: 8px;
+  right: 0.2px;
+
 }
 
 .card-img, .card-img-top, .card-img-bottom {

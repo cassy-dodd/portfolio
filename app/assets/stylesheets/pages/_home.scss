@@ -177,3 +177,41 @@ body {
     transform: rotateX(0deg) skewX(0deg);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  div.main-container {
+    #profile-pic { display: none; }
+  .cards {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    height: 50%;
+  }
+  .card__face--front {
+    width: 100%;
+    .card-img {
+    object-fit: fill;
+    }
+  }
+}
+}
+
+@media only screen and (max-width: 768px) {
+  div.main-container {
+    #profile-pic { display: none; }
+  .cards {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    height: 50%;
+  }
+  .card__face--front {
+    width: 100%;
+    .card-img {
+    object-fit: fill;
+    }
+  }
+}
+}
