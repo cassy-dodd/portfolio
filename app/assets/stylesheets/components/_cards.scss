@@ -1,6 +1,14 @@
 .project-cards-container {
-   margin-top: 300px;
+  margin: 100px 0px;
+  padding: 24px;
+  animation: pulse 20s infinite alternate;
+  border-radius: 16px;
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
 }
+
 
 .cards {
 display: grid;
@@ -52,7 +60,6 @@ align-items: center;
 }
 
 .card__face--back {
-  background: blue;
   transform: rotateY(180deg);
   border-radius: 8px;
 }
@@ -62,4 +69,19 @@ align-items: center;
   height: 100%;
   width: 100%;
   border-radius: 8px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 35px rgb(223, 191, 191);;
+  }
+  25% {
+    box-shadow: 0 0 35px lightgreen;
+  }
+  50% {
+    box-shadow: 0 0 70px lightblue;
+  }
+  75% {
+    box-shadow: 0 0 70px orange;
+  }
 }
