@@ -33,12 +33,6 @@ body {
   align-self: center;
   margin-top: 20px;
   border-radius: 50%;
-  // animation: pulse-color 20s infinite alternate;
-  // box-shadow: 0 0 70px rgba(255, 255, 255, 0.9);
-  // animation-name: fadeInOpacity;
-  // animation-iteration-count: 1;
-  // animation-timing-function: ease-in;
-  // animation-duration: 3s;
   img {
     height: 300px;
     width: 300px;
@@ -65,89 +59,8 @@ body {
   }
 }
 
-.glitch {
-  color: black;
-  position: relative;
-  font-size: 4vw;
-  animation: glitch 5s 5s infinite;
-  text-align: center;
-  width: 100%;
-  // text-shadow: 0 0 100px rgba(223, 191, 191, 0.4);
-
-}
-
-
-.glitch::before {
-  content: attr(data-text);
-  position: absolute;
-  left: -2px;
-  text-shadow: -5px 0 magenta;
-  // background: $background-color;
-  overflow: hidden;
-  top: 0;
-  animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
-  width: 100%;
-}
-
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 2px;
-  text-shadow: -5px 0 #24FF00;
-  // background: $background-color;
-  overflow: hidden;
-  top: 0;
-  animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
-  width: 100%;
-}
-
-@keyframes glitch {
-  // 1%{
-  //   // transform: rotateX(10deg) skewX(90deg);
-  // }
-  2%{
-    transform: rotateX(0deg) skewX(0deg);
-  }
-}
-
-@keyframes noise-1 {
-  $steps: 30;
-  @for $i from 1 through $steps {
-    #{percentage($i*(1/$steps))} {
-      $top: random(100);
-      $bottom: random(101 - $top);
-      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
-    }
-  }
-}
-
-@keyframes noise-2 {
-  $steps: 30;
-  @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      $top: random(100);
-      $bottom: random(101 - $top);
-      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
-    }
-  }
-}
-
-@keyframes fudge {
-  from {
-    transform: translate(0px, 0px);
-  }
-  to {
-    transform: translate(0px, 2%);
-  }
-}
-
-.glow {
-  @extend .glitch;
-  // text-shadow: 0 0 1000px rgb(223, 191, 191);
-  color: transparent;
-  position: absolute;
-  top: 0;
-  width: 100%;
+.title {
+  margin-top: 100px;
 }
 
 .subtitle {
@@ -189,17 +102,9 @@ body {
   }
 }
 
-@keyframes glitch-2 {
-  1%{
-    transform: rotateX(10deg) skewX(70deg);
-  }
-  2%{
-    transform: rotateX(0deg) skewX(0deg);
-  }
-}
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   div.main-container {
+    width: 100%;
     #profile-pic {
       height: 200px;
       width: 200px;
@@ -208,29 +113,68 @@ body {
       // height: 50%;
       // width: 50%;
     }
-  .cards {
-    width: 100%;
-  }
-  .card {
-    width: 100%;
-    height: 50%;
-  }
-  .card__face--front {
-    width: 100%;
-    .card-img {
-    object-fit: fill;
+    .cards {
+      display: none;
+    }
+    .card {
+      width: 50%;
+      height: 50%;
+
+    }
+    .card__face--front {
+      // width: 100%;
+      // .card-img {
+      // object-fit: fill;
+      display: none;
+      }
+    .card__face--back {
+      display: none;
+    }
+    .scene {
+      display: none;
+    }
+    .mobile-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    }
+    img {
+      width: 100px;
+      padding: 8px;
+      margin: 20px;
+      }
+    }
+    .subtitle {
+      font-size: 14px;
     }
   }
-}
-}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 720px) and (max-width: 860px) {
   div.main-container {
-    #profile-pic {
-
+    .scene--card {
+    //   .col-12: {
+        width: 75%;
+        left: 75px;
+    //   }
     }
-  .cards {
+    .mobile-icon {
+    display: none;
+    img {
+      display: none;
+    }
+  }
+  }
+}
+
+
+@media only screen and (min-width: 868px) {
+  .navbar {
     width: 100%;
+  }
+  div.main-container {
+  .cards {
+    // width: 100%;
   }
   .card {
     width: 100%;
@@ -240,7 +184,13 @@ body {
     width: 100%;
     .card-img {
     object-fit: fill;
+      }
     }
   }
-}
+  .mobile-icon {
+    display: none;
+    img {
+      display: none;
+    }
+  }
 }
