@@ -162,8 +162,14 @@ body {
     display: none;
     img {
       display: none;
+      }
     }
-  }
+    .card__face--back {
+      font-size: 1.8em;
+      img {
+        height: 60px;
+      }
+    }
   }
 }
 

@@ -6,4 +6,5 @@ function cardFlip() {
     });
   });
 }
+
 export { cardFlip };
