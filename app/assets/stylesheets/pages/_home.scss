@@ -111,6 +111,16 @@ body {
       height: 100%;
       width: 100%;
     }
+    div.navbar {
+    .navbar-toggler {
+
+      display: flex;
+      justify-content: center;
+      .navbar-toggler-icon {
+        background-size: auto;
+      }
+    }
+  }
     .banner {
       width: 60%;
       padding: 24px;
@@ -141,8 +151,15 @@ body {
       display: flex;
       justify-content: center;
     }
-    img {
-      width: 50%;
+    #yance-logo{
+      width: 60%;
+      height: 75%;
+      padding: 8px;
+      margin: 20px;
+      }
+      #hero-logo {
+      width: 85%;
+      height: 70%;
       padding: 8px;
       margin: 20px;
       }
@@ -150,9 +167,6 @@ body {
     .subtitle {
       font-size: 14px;
     }
-  // .navbar-collapse {
-  //   display: none;
-  // }
   }
 
 @media only screen and (min-width: 720px) and (max-width: 860px) {
